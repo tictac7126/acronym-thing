@@ -4,7 +4,6 @@
 	--headerheight: 12vh;
 	--footerheight: 5vh;
 	--tilesize: 12vh;
-
 	--lightgrey: rgb(214, 214, 214);
 }
 body {
@@ -37,7 +36,7 @@ nav {
 	box-shadow: 0px 0px 15px 5px var(--lightgrey);
 }
 #theme-container {
-	
+	font-size: 50px;
 }
 #tile-container div {
 	text-transform:uppercase;
