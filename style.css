@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+:root {
+	font-family: "Raleway", sans-serif;
+	--headerheight: 12vh;
+	--footerheight: 5vh;
+	--tilesize: 12vh;
+
+	--lightgrey: rgb(214, 214, 214);
+}
+body {
+  margin:0;
+}
+nav {
+	height: var(--headerheight);
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0px 7px 15px 5px var(--lightgrey);
+}
+#game-container {
+	display:flex;
+	justify-content:space-around;
+	flex-direction:column;
+	align-items:center;
+	height:calc(100vh - var(--headerheight) - var(--footerheight))
+}
+#tile-container {
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction:row;
+	gap: 10px;
+	height: calc(var(--tilesize) * 1.3);
+	background-color: white;
+	width: 100%;
+	box-shadow: 0px 0px 15px 5px var(--lightgrey);
+}
+#theme-container {
+	
+}
+#tile-container div {
+	text-transform:uppercase;
+	width: 0vh;
+	height: 0vh;
+	border: 1px solid black;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:white;
+	border-radius: 5px;
+}
+@keyframes appear {
+	from {
+		width: 0;
+		height: 0;
+		font-size:0;
+	}
+	to {
+		width: var(--tilesize);
+		height: var(--tilesize);
+		font-size: 30px;
+	}
+}
+#footer {
+	height: var(--footerheight);
+	text-align:center;
+}
+@keyframes appear2 {
+	from {
+		width: 0;
+		height: 0;
+	}
+	to {
+		width: 100%;
+		height: 100%;
+	}
+}
