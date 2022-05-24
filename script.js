@@ -13,8 +13,14 @@ document.addEventListener("keydown", event => {
 });
 
 function newTile() {
+	const num = Math.random()
 	var tile = document.createElement("div");
-	var text = document.createTextNode(consonants[Math.floor(Math.random() * consonants.length)]);
+	if (num < 0.5) {
+		var text = document.createTextNode(consonants[Math.floor(Math.random() * consonants.length)]);
+	}
+	else {
+		var text = document.createTextNode(vowels[Math.floor(Math.random() * vowels.length)]);
+	}
 	tile.appendChild(text);
 	tile.style.animation = "appear 0.17s cubic-bezier(.35,.25,.79,1.59) forwards";
 	tile_container.appendChild(tile)
